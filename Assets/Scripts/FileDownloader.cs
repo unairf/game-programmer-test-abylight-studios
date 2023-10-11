@@ -51,7 +51,10 @@ namespace AbylightGPT
             if (www.result != UnityWebRequest.Result.Success)
                 Debug.LogError(www.error);
             else
+            {
                 OnFileDownloaded?.Invoke(FileFullPath);
+                Debug.Log("File downloaded: <color=green>" + FileFullPath + "</color>");
+            }
         }
 
         private bool IsUrlValid(string url)
