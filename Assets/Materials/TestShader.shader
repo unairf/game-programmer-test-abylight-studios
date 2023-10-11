@@ -3,7 +3,7 @@ Shader"Custom/TestShader"
     Properties
     {
         _MainTex("Main Texture (RGB)", 2D) = "white" {}
-        _MaskTex("Mask Texture (BW)", 2D) = "white" {}
+        _MaskTex("Mask Texture (BW)", 2D) = "black" {}
     }
 
     SubShader
@@ -51,4 +51,5 @@ half4 frag(v2f i) : SV_Target
             ENDCG
         }
     }
+Fallback"Diffuse"
 }
