@@ -8,6 +8,8 @@ namespace AbylightGPT
 {
     public class RegistersParser : MonoBehaviour
     {
+        [SerializeField] private TMPro.TextMeshProUGUI debugText;
+
         private List<Register> registers = new List<Register>();
 
         public void ParseRegisters(string fileContent)
@@ -38,6 +40,14 @@ namespace AbylightGPT
                     registers.Add(GetRegisterFromString(lines[i]));
                 }
             }
+
+            // Show the registers int the text component
+            string text = "";
+            foreach (Register register in registers)
+            {
+                text += register.GetContent();
+            }
+            debugText.text = text;
         }
 
         

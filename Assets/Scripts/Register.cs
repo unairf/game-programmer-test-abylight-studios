@@ -18,6 +18,11 @@ namespace AbylightGPT
             comment = _comment;
             value = _value;
         }
+
+        public string GetContent()
+        {
+            return registerType.ToString() +" ["+comment +"] "+value.ToString() +"\n";
+        }
     }
 
     // Used lowercase to match the CSV file, PascalCase is normally used for enums
