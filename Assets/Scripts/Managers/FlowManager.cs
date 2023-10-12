@@ -39,11 +39,6 @@ namespace AbylightGPT
 
         }
 
-
-        /* These methods are called from the context menu of the FlowManager component.
-         * [ContextMenu] is added for testing purposes, will be replaced in later tasks.
-         */
-        [ContextMenu("Go to Init")]
         public void GoToInit()
         {
             LoadScene("Init");
@@ -63,10 +58,9 @@ namespace AbylightGPT
 
         private void LoadScene(string sceneName)
         {
+            // Set the next scene to load and load the loading screen
             nextSceneToLoad = sceneName;
             SceneManager.LoadScene("LoadingScreen");
-            
-            
         }
 
         public void LoadNextScene()
