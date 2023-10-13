@@ -1,4 +1,7 @@
 # Game Programmer Test (Abylight Studios, 2023)
+
+Unity version: 2022.2.16f1
+
 - [Time of Completion](#time-of-completion)
 - [Task 6: Theoric evaluation](#task-6-theoric-evaluation)
 
